@@ -1,0 +1,64 @@
+//input[@type=”text”][@name=”coupon_code”]
+
+//td[@class=”product-price”]/span
+
+//button[@value=”Zastosuj kupon”]
+
+//td[@class=”product-thumbnail”]/a/img
+
+//input[starts-with(@id,”shipping_method_0_flat”)]
+
+//h2[contains(text(),”Podsumowanie”)]
+
+//th[contains(text(),”Produkt”)]
+
+WebElement loginButton = findElement(By.xpath("//button[@name='login'][@value='Zaloguj się']"));
+
+input[starts-with(@id,'address_')]
+
+input[ends-with(@id,'_ address')]
+
+input[contains(@id,'address')];
+
+//h3[text()='Dane płatności']
+
+WebElement navHeader = driver.findElement(By.cssSelector("html body header nav"));
+
+WebElement zalogujHeader = driver.findElement(By.cssSelector("h2"));
+
+
+####Lokalizowanie elementu za pomocą  tagu oraz atrybutu####
+
+WebElement userName = driver.findElement(By.cssSelector("input#username”));     //Znak  #  oznacza id
+
+WebElement password = driver.findElement(By.cssSelector("p.woocommerce-LostPassword.lost_password”));      //Znak  .  oznacza class
+
+WebElement loginButton = driver.findElement(By.cssSelector("button[name='login'][value='Zaloguj się']”));
+
+WebElement mezczyznaButton = driver.findElement(By.xpath("//input[@name='KobietaCzyMezczyzna'][@value='Mężczyzna']"));
+
+WebElement przedziałWieku = driver.findElement(By.xpath("//input[@name='przedzialWieku'][@value='20-29']"));
+
+WebElement szukanyProdukt = driver.findElement(By.xpath("//input[@name='Produkt'][@value='Torba sportowa']"));
+
+WebElement trzeciProduktNajnowszy = driver.findElement(By.xpath("//ul[contains(@class,'products')]/li[3]"));
+
+WebElement iloscInput = driver.findElement(By.xpath("//input[starts-with(@id,'quantity')]"));
+
+driver.findElement(By.xpath("//*[@class='summary entry-summary']/p/span")).getText();
+
+driver.findElement(By.xpath("//*[@class='product_title entry-title']")).getText();
+
+driver.findElement(By.xpath("//td[@class='product-name']/a")).getText();
+
+driver.findElement(By.xpath("//td[@class='product-subtotal']/span")).getText();
+
+//td[@class='actions']/input[@value='/koszyk/']
+
+//h2[contains(text(),'Liverpool')]
+
+//button[@name='add-to-cart']
+
+//td[@data-title='Kwota']/span
+
+//*[@class='wc-proceed-to-checkout']/a

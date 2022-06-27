@@ -1,0 +1,89 @@
+try{
+
+ WebElement wyslijPrzycisk = driver.findElement(By.id("Prześlij"));
+ wyslijPrzycisk.click();
+
+} catch (NoSuchElementException e) {
+
+ System.out.println("Przycisku 'Prześlij' nie ma na stronie!");
+
+}
+
+
+//MULTI BLOKI CATCH
+
+try{
+
+// Logika kodu
+
+} catch (ExceptionType1 e1) {
+
+// W tym miejscu, implementujemy kod, który miałby się wykonać
+// w przypadku zaistnienia określonego wyjątku (e1) w powyższej instrukcji catch
+
+} catch (ExceptionType2 e2) {
+
+// W tym miejscu, implementujemy kod, który miałby się wykonać
+// w przypadku zaistnienia określonego wyjątku (e2) w powyższej instrukcji catch
+
+}
+
+//PRZYKLAD:
+
+try{
+
+WebElement wyslijPrzycisk = driver.findElement(By.id("Prześlij"));
+wyslijPrzycisk.click();
+
+} catch (NoSuchElementException e1) {
+
+System.out.println("Przycisku 'Prześlij' nie ma na stronie!");
+
+} catch (ElementNotVisibleException e2) {
+
+System.out.println("Przycisk 'Prześlij' nie jest widoczny na stronie");
+
+}
+
+//MULTI CATCH FINALLY
+
+try{
+
+// Logika kodu
+
+} catch (ExceptionType1 e1) {
+
+// W tym miejscu, implementujemy kod, który miałby się wykonać
+// w przypadku zaistnienia określonego wyjątku (e1) w powyższej instrukcji catch
+
+} catch (ExceptionType2 e2) {
+
+// W tym miejscu, implementujemy kod, który miałby się wykonać
+// w przypadku zaistnienia określonego wyjątku (e2) w powyższej instrukcji catch
+
+} finally {
+
+//Logika kodu, która wykona się zawsze
+
+}
+
+//PRZYKLAD:
+
+try{
+
+WebElement wyslijPrzycisk = driver.findElement(By.id("Prześlij"));
+wyslijPrzycisk.click();
+
+} catch (NoSuchElementException e1) {
+
+System.out.println("Przycisku 'Prześlij' nie ma na stronie!");
+
+} catch (ElementNotVisibleException e2) {
+
+System.out.println("Przycisk 'Prześlij' nie jest widoczny na stronie");
+
+} finally {
+
+System.out.println("Przycisk 'Prześlij' został zweryfikowany");
+
+}

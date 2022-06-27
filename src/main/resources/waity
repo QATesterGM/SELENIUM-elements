@@ -1,0 +1,53 @@
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  /Implicity Wait
+wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[starts-with(@id,'quantity_')]")));
+
+driver.switchTo().alert().dismiss();
+driver.switchTo().alert().accept();
+driver.switchTo().alert().getText();
+driver.switchTo().alert().sendKeys("Warszawa");
+
+Actions builder= new Actions(driver);
+builder.moveToElement(element).click().perform();
+
+//przyklad- podwójne klikniecie:
+
+WebElement doubleClickButton_PokazKomunikat = driver.findElement(By.xpath("//*[@value='Dwuklik pokaż komunikat']"));
+Actions builder = new Actions(driver);
+builder.doubleClick(doubleClickButton_PokazKomunikat).perform();
+
+//przyklad - klikniecie prawym klawiszem
+
+WebElement rightClickButton_KliknijRight = driver.findElement(By.id("rightClick"));
+Actions builder = new Actions(driver);
+builder.contextClick(rightClickButton_KliknijRight).perform();
+
+//przyklad wciśniecie klawisza i przytrzymanie go SHIFT
+
+Actions builder = new Actions(driver);
+
+Action textCaps= builder.keyDown(element, Keys.SHIFT)
+        .sendKeys(element, "wartość tekstowa")
+        .keyUp(element, Keys.SHIFT)
+        .build();
+
+textCaps.perform();
+
+//przyklad w kodzie
+
+WebElement nazwiskoInput = driver.findElement(By.id("Nazwisk"));
+nazwiskoInput.clear();
+
+Actions builder = new Actions(driver);
+
+Action textCaps= builder.keyDown(nazwiskoInput, Keys.SHIFT)
+.sendKeys(nazwiskoInput, "nowak")
+.keyUp(nazwiskoInput, Keys.SHIFT)
+.build();
+
+textCaps.perform();
+
+//przyklad - najechanie na element i w niego klikniecie
+
+Actions builder = new Actions(driver);
+builder.moveToElement(elementToHover).perform();
+builder.click(elementToClick).build().perform();

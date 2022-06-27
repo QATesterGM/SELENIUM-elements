@@ -1,0 +1,20 @@
+Assert.assertEquals(AktualnaWartość, OczekiwanaWartość);   //TWARDA
+softassert.assertEquals(AktualnaWartość, OczekiwanaWartość);  //MIEKKA
+
+Assert.assertNotEquals(ankietaMenu , "Szkolenia"); //nie są sobie równe
+
+Assert.assertTrue(odbiorOsobistyCheckbox.isSelected());   //asert TRUE zwraca  czy warunek jest prawdą
+System.out.print(“Asercja POPRAWNA“);
+
+
+Assert.assertFalse(odbiorOsobistyCheckbox.isSelected()); asert FALSE zwraca czy waraunek jest nieprawdą
+System.out.print(“Asercja POPRAWNA“);
+
+
+Assert.assertNull(loginInput.getAttribute("disabled"));  //Oczekuje NULLa
+
+Assert.assertNotNull(passwordInput.getAttribute("disabled"));   //oczekuje NOT NULLa
+
+Assert.assertFalse(zapamietajMnieCheckbox.isSelected(), "Checkbox Zapamiętaj mnie jest zaznaczony");
+
+wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[starts-with(@id,'quantity_')]")));
